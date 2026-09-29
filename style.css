@@ -53,3 +53,24 @@ a{color:inherit;text-decoration:none}
   .modal-panel{padding:34px 24px 28px;width:calc(100% - 20px);max-height:92svh}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.site-loader,.header,.mobile-menu,.modal-panel{transition:none}.hero-media,.editorial-frame,.horizontal-track{transform:none!important}.service-item,.visual-card img,.huge-cta{transition:none}}
+
+
+/* --- MASTER MOTION SYSTEM / SECOND PROMPT OVERRIDES --- */
+.editorial-image{height:155vh;display:grid;place-items:center;position:relative;overflow:visible}
+.editorial-frame{width:min(58vw,900px);height:70vh;will-change:transform}
+.editorial-frame img{will-change:transform}
+.horizontal-wrap{height:100vh;min-height:680px;position:relative;overflow:hidden;background:#111}
+.horizontal-track{position:relative;height:100%;min-height:680px;display:flex;align-items:center;gap:5vw;padding:0 8vw;width:max-content;will-change:transform}
+.horizontal-progress{pointer-events:none}
+.visual-card img{will-change:transform}
+@media (max-width:900px){
+  .editorial-image{height:125vh;padding:0 24px}
+  .editorial-frame{width:min(88vw,600px);height:62vh}
+  .horizontal-wrap{height:100svh;min-height:620px}
+  .horizontal-track{height:100%;min-height:620px;gap:18px;padding:0 24px}
+  .horizontal-intro{width:78vw;min-width:78vw}
+  .visual-card{width:72vw;height:58vh;min-height:420px}
+}
+@media (prefers-reduced-motion:reduce){
+  .editorial-frame,.editorial-frame img,.horizontal-track,.visual-card img,.hero-media,.hero-media img{will-change:auto}
+}
